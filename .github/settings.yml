@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install LEMP Stack
+  homepage: https://buluma.github.io/
+  topics: , ansible, molecule, playbook

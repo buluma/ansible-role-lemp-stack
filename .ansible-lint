@@ -1,0 +1,11 @@
+---
+#
+# Ansible managed
+#
+  - molecule/default/collections.yml
+  - .cache
+  - .github
+  - requirements.yml
+
+enable_list:
+  - name[prefix]
