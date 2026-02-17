@@ -1,18 +1,13 @@
 ---
 galaxy_info:
   author: mosufy
-  description: Install LEMP Stack
-  company: mosufy
-
+  description: 'Install LEMP Stack'
   license: MIT
-
+  company: mosufy
   min_ansible_version: 1.2
-
   platforms:
     - name: EL
       versions:
         - all
-
-  galaxy_tags: []
-
+  galaxy_tags:
 dependencies: []
