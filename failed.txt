@@ -1,0 +1,4 @@
+ansible-role-lemp-stack: [ERROR]: Task failed: Error rendering template: 'NoneType' object is not iterable
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "Task failed: Error rendering template: 'NoneType' object is not iterable"}
+ansible-role-lemp-stack: [ERROR]: Task failed: Error rendering template: 'NoneType' object is not iterable
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "Task failed: Error rendering template: 'NoneType' object is not iterable"}
