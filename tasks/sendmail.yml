@@ -1,12 +1,12 @@
 ---
 - name: Install Sendmail
   with_items:
-  - sendmail
-  - sendmail-cf
-  - make
-  - mailx
+    - sendmail
+    - sendmail-cf
+    - make
+    - mailx
   yum:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: present
 - name: Remove Postfix
   yum:
