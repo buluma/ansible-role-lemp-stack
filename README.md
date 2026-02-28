@@ -12,13 +12,12 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- name: Converge
-  hosts: all
-  become: true
+- become: true
   gather_facts: true
-
+  hosts: all
+  name: Converge
   roles:
-    - ansible-role-lemp-stack
+  - ansible-role-lemp-stack
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -29,9 +28,8 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
-# defaults file for lemp-stack
-
-php_version: 70```
+php_version: 70
+```
 
 ## [Requirements](#requirements)
 

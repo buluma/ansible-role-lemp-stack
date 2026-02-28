@@ -2,3 +2,6 @@ ansible-role-lemp-stack: [ERROR]: Task failed: Error rendering template: 'NoneTy
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "Task failed: Error rendering template: 'NoneType' object is not iterable"}
 ansible-role-lemp-stack: [ERROR]: Task failed: Error rendering template: 'NoneType' object is not iterable
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "Task failed: Error rendering template: 'NoneType' object is not iterable"}
+ansible-role-lemp-stack [generator]: ERROR: Unhandled exception when retrieving 'DEFAULT_LOCAL_TMP': [Errno 1] Operation not permitted: '/Users/shadowwalker/.ansible/tmp/ansible-local-85088jzo4nfe1'
+ansible-role-lemp-stack [generator]: [ERROR]: Task failed: Error rendering template: 'NoneType' object is not iterable
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "Task failed: Error rendering template: 'NoneType' object is not iterable"}

@@ -1,13 +1,11 @@
 ---
-
 - name: restart nginx
   service:
+    enabled: true
     name: nginx
     state: restarted
-    enabled: yes
-
 - name: restart php-fpm
   service:
+    enabled: true
     name: php-fpm
     state: restarted
-    enabled: yes

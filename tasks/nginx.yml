@@ -1,27 +1,25 @@
 ---
 - name: Install nginx
+  notify:
+  - restart nginx
   yum:
     name: nginx16
     state: present
-  notify:
-    - restart nginx
-
-- name: Make /var/lib/nginx/cache directory
-  file:
+- file:
+    group: nginx
+    mode: 700
+    owner: nginx
     path: /var/lib/nginx/cache
     state: directory
-    owner: nginx
+  name: Make /var/lib/nginx/cache directory
+  notify:
+  - restart nginx
+- file:
     group: nginx
     mode: 700
-  notify:
-    - restart nginx
-
-- name: Make /etc/nginx/ssl directory
-  file:
+    owner: nginx
     path: /etc/nginx/ssl
     state: directory
-    owner: nginx
-    group: nginx
-    mode: 700
+  name: Make /etc/nginx/ssl directory
   notify:
-    - restart nginx
+  - restart nginx
