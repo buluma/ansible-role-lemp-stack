@@ -5,4 +5,4 @@
 repository:
   description: Install LEMP Stack
   homepage: https://buluma.github.io/
-  topics: , ansible, molecule, playbook
+  topics: lemp, nginx, php, mysql, ansible, molecule, playbook

@@ -5,6 +5,10 @@ galaxy_info:
   company: mosufy
   description: Install LEMP Stack
   galaxy_tags:
+    - lemp
+    - nginx
+    - php
+    - mysql
   license: MIT
   min_ansible_version: '1.2'
   platforms:
