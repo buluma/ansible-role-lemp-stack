@@ -3,15 +3,15 @@ name: CI
 true:
   pull_request:
     branches:
-    - main
+      - main
   push:
     branches:
-    - main
+      - main
   workflow_dispatch:
 jobs:
   vim:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
-    - name: Test Vim
-      run: ansible-playbook -K tests/test.yml -vvv
+      - uses: actions/checkout@v6
+      - name: Test Vim
+        run: ansible-playbook -K tests/test.yml -vvv

@@ -1,7 +1,7 @@
 ---
-- name: Install LEMP with PHP 7.0
+- name: lemp-php70 | Install LEMP with PHP 7.0
   notify:
-    - restart php-fpm
+    - Restart php-fpm
   when:
     - php_version == 70
   with_items:
@@ -24,6 +24,6 @@
     - php70w-pecl-apcu
     - php70w-pecl-imagick
     - php70w-fpm
-  yum:
+  ansible.builtin.dnf:
     name: "{{ item }}"
     state: present

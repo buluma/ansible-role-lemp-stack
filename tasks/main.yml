@@ -1,9 +1,17 @@
 ---
-- include: lemp-php56.yml
-- include: lemp-php70.yml
-- include: composer.yml
-- include: nginx.yml
-- include: sendmail.yml
-- include: root-config.yml
+- name: Main | Include lemp-php56 tasks
+  ansible.builtin.import_tasks: lemp-php56.yml
+- name: Main | Include lemp-php70 tasks
+  ansible.builtin.import_tasks: lemp-php70.yml
+- name: Main | Include composer tasks
+  ansible.builtin.import_tasks: composer.yml
+- name: Main | Include nginx tasks
+  ansible.builtin.import_tasks: nginx.yml
+- name: Main | Include sendmail tasks
+  ansible.builtin.import_tasks: sendmail.yml
+- name: Main | Include root-config tasks
+  ansible.builtin.import_tasks: root-config.yml
 - name: Install all updates
-  yum: name=* state=latest
+  ansible.builtin.dnf: # noqa: package-latest
+    name: "*"
+    state: latest

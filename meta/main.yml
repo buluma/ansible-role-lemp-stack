@@ -11,7 +11,9 @@ galaxy_info:
     - mysql
   license: MIT
   min_ansible_version: "1.2"
+  namespace: mosufy
   platforms:
     - name: EL
       versions:
         - all
+  role_name: lemp_stack

@@ -1,7 +1,7 @@
 ---
-- name: Install LEMP with PHP-FPM 5.6
+- name: lemp-php56 | Install LEMP with PHP-FPM 5.6
   notify:
-    - restart php-fpm
+    - Restart php-fpm
   when:
     - php_version == 56
   with_items:
@@ -24,6 +24,6 @@
     - php56w-pecl-apcu
     - php56w-pecl-imagick
     - php56w-fpm
-  yum:
+  ansible.builtin.dnf:
     name: "{{ item }}"
     state: present

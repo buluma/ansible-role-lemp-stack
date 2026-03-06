@@ -1,18 +1,16 @@
 ---
-- get_url:
+- name: composer | Download composer installer
+  ansible.builtin.get_url:
     dest: /tmp/installer
+    mode: "0644"
     url: https://getcomposer.org/installer
-  name: Download composer
-- args:
-    creates: /usr/local/bin/composer.phar
-  name: Install composer
-  shell: cat /tmp/installer | php -- --install-dir=/usr/local/bin
-- args:
+- name: composer | Install composer
+  ansible.builtin.command:
+    argv:
+      - php
+      - /tmp/installer
+      - --
+      - --install-dir=/usr/local/bin
+      - --filename=composer
+  args:
     creates: /usr/local/bin/composer
-  name: Rename composer.phar to composer
-  shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer
-- file:
-    mode: a+x
-    path: /usr/local/bin/composer
-    state: file
-  name: Make composer executable
