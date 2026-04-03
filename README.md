@@ -67,3 +67,4 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [mosufy](https://buluma.github.io/)
+
