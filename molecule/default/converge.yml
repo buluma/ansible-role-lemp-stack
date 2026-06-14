@@ -4,4 +4,4 @@
   become: true
   gather_facts: true
   roles:
-    - ansible-role-lemp-stack
+    - role: buluma.lemp_stack

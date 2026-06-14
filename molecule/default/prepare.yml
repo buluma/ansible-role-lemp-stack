@@ -1,0 +1,13 @@
+---
+- name: Prepare
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    python_pip_modules:
+      - name: pexpect
+
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.epel
+    - role: buluma.python_pip

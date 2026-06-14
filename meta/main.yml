@@ -2,7 +2,7 @@
 dependencies: []
 galaxy_info:
   author: buluma
-  company: mosufy
+  company: ShadowNet
   description: Install LEMP Stack
   galaxy_tags:
     - lemp
@@ -11,7 +11,7 @@ galaxy_info:
     - mysql
   license: MIT
   min_ansible_version: "2.12"
-  namespace: mosufy
+  namespace: buluma
   platforms:
     - name: EL
       versions:
