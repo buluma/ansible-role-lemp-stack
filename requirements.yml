@@ -8,4 +8,4 @@ roles:
   - name: buluma.php
 collections:
   - name: community.general
-  - name: community.mysql
+  - name: ansible.mysql
