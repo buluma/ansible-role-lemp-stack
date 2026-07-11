@@ -15,7 +15,7 @@
     state: directory
   notify:
     - Restart nginx
-  # Separator for the pre-commit handler parser.
+# Separator for the pre-commit handler parser.
 - name: nginx | Make /etc/nginx/ssl directory
   ansible.builtin.file:
     group: nginx
