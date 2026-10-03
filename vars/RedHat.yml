@@ -1,0 +1,17 @@
+---
+lemp_php_packages:
+  - mariadb
+  - php
+  - php-fpm
+  - php-mysqlnd
+  - php-gd
+  - php-mbstring
+  - php-xml
+lemp_php_fpm_service: php-fpm
+lemp_php_fpm_pool: /etc/php-fpm.d/www.conf
+lemp_nginx_user: nginx
+lemp_mail_packages:
+  - sendmail
+  - sendmail-cf
+  - make
+  - s-nail

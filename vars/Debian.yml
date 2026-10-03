@@ -1,0 +1,15 @@
+---
+lemp_php_packages:
+  - mariadb-client
+  - php
+  - php-fpm
+  - php-mysql
+  - php-gd
+  - php-mbstring
+  - php-xml
+lemp_nginx_user: www-data
+lemp_mail_packages:
+  - sendmail
+  - sendmail-cf
+  - make
+  - bsd-mailx

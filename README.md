@@ -72,7 +72,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
-php_version: 70
+php_version: distro
 ```
 
 ## [Requirements](#requirements)
@@ -126,3 +126,7 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+
+The default installs distribution-supported PHP packages on Debian and Red Hat
+operating systems. The legacy `php_version: 56` and `php_version: 70` options
+require a Red Hat system with the corresponding Webtatic repository configured.

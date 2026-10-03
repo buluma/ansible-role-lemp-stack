@@ -1,2 +1,3 @@
 ---
-php_version: 70
+# Install the PHP version supported by the distribution by default.
+php_version: distro

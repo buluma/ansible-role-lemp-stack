@@ -1,18 +1,14 @@
 ---
 - name: sendmail | Install Sendmail
-  with_items:
-    - sendmail
-    - sendmail-cf
-    - make
-    - mailx
-  ansible.builtin.dnf:
-    name: "{{ item }}"
+  ansible.builtin.package:
+    name: "{{ lemp_mail_packages }}"
     state: present
 - name: sendmail | Remove Postfix
-  ansible.builtin.dnf:
+  ansible.builtin.package:
     name: postfix
     state: absent
 - name: sendmail | Copy Sendmail config
+  when: ansible_facts['os_family'] == 'RedHat'
   ansible.builtin.copy:
     dest: /etc/mail/aliases
     mode: preserve

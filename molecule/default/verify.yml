@@ -14,3 +14,13 @@
           - "'nginx' in services"
           - "services['nginx']['state'] == 'running'"
         quiet: true
+
+    - name: Validate nginx configuration
+      ansible.builtin.command: nginx -t
+      changed_when: false
+
+    - name: Check PHP-FPM is listening
+      ansible.builtin.wait_for:
+        host: 127.0.0.1
+        port: 9000
+        timeout: 10

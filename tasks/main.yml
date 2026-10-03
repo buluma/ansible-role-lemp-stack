@@ -1,4 +1,13 @@
 ---
+- name: Main | Load distribution variables
+  ansible.builtin.include_vars: "{{ ansible_facts['os_family'] }}.yml"
+- name: Main | Install distribution PHP packages
+  ansible.builtin.package:
+    name: "{{ lemp_php_packages }}"
+    state: present
+  when: php_version == 'distro'
+  notify: Restart php-fpm
+# Separator for the pre-commit handler parser.
 - name: Main | Include lemp-php56 tasks
   ansible.builtin.import_tasks: lemp-php56.yml
 - name: Main | Include lemp-php70 tasks
@@ -11,7 +20,3 @@
   ansible.builtin.import_tasks: sendmail.yml
 - name: Main | Include root-config tasks
   ansible.builtin.import_tasks: root-config.yml
-- name: Install all updates
-  ansible.builtin.dnf: # noqa: package-latest
-    name: "*"
-    state: latest
