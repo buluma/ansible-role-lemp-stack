@@ -72,8 +72,12 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
-php_version: 70
+php_version: system
 ```
+
+By default, the role installs the PHP version provided by the target EL or Fedora
+repositories. Set `php_version` to `70` or `56` to request the legacy PHP 7.0 or
+5.6 package sets where they are available.
 
 ## [Requirements](#requirements)
 
@@ -107,9 +111,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |[EL](https://hub.docker.com/r/buluma/docker-molecule-images)|10, 9|
-|[Debian](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
 |[Fedora](https://hub.docker.com/r/buluma/docker-molecule-images)|44, 43|
-|[Ubuntu](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done on:
 

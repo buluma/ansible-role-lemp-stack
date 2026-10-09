@@ -4,7 +4,7 @@
     - Restart nginx
   # Separator for the pre-commit handler parser.
   ansible.builtin.dnf:
-    name: nginx16
+    name: nginx
     state: present
 - name: nginx | Make /var/lib/nginx/cache directory
   ansible.builtin.file:

@@ -1,0 +1,22 @@
+---
+- name: lemp-php-system | Install the distribution PHP runtime and extensions
+  notify:
+    - Restart php-fpm
+  ansible.builtin.dnf:
+    name:
+      - php
+      - php-cli
+      - php-fpm
+      - php-gd
+      - php-imap
+      - php-intl
+      - php-mbstring
+      - php-mysqlnd
+      - php-odbc
+      - php-pear
+      - php-pecl-apcu
+      - php-pecl-imagick
+      - php-soap
+      - php-tidy
+      - php-xml
+    state: present
