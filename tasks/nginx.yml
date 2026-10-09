@@ -6,6 +6,11 @@
   ansible.builtin.dnf:
     name: nginx
     state: present
+- name: nginx | Enable and start nginx
+  ansible.builtin.service:
+    enabled: true
+    name: nginx
+    state: started
 - name: nginx | Make /var/lib/nginx/cache directory
   ansible.builtin.file:
     group: nginx
