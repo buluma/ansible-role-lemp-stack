@@ -2,7 +2,7 @@
 php_version: system
 lemp_base_packages:
   RedHat:
-    - mysql
+    - mariadb-server
   Debian:
     - default-mysql-server
 lemp_php_packages:
@@ -41,7 +41,6 @@ lemp_sendmail_packages:
     - sendmail
     - sendmail-cf
     - make
-    - mailx
   Debian:
     - sendmail
     - sendmail-cf

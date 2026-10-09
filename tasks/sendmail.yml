@@ -17,4 +17,3 @@
   ansible.builtin.service:
     enabled: true
     name: sendmail
-    state: started
