@@ -1,14 +1,14 @@
-# [Ansible role lemp-stack](#ansible-role-lemp-stack)
+# [Ansible role lemp_stack](#ansible-role-lemp_stack)
 
 Install LEMP Stack
 
 |GitHub|Issues|Pull Requests|Version|Downloads|
 |------|------|-------------|-------|---------|
-|[![github](https://github.com/buluma/ansible-role-lemp-stack/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-lemp-stack/actions/workflows/molecule.yml)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-lemp-stack.svg)](https://github.com/buluma/ansible-role-lemp-stack/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-lemp-stack.svg)](https://github.com/buluma/ansible-role-lemp-stack/pulls/)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-lemp-stack.svg)](https://github.com/buluma/ansible-role-lemp-stack/releases/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/lemp-stack)](https://galaxy.ansible.com/ui/standalone/roles/buluma/lemp-stack/documentation)|
+|[![github](https://github.com/buluma/ansible-role-lemp_stack/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-lemp_stack/actions/workflows/molecule.yml)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-lemp_stack.svg)](https://github.com/buluma/ansible-role-lemp_stack/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-lemp_stack.svg)](https://github.com/buluma/ansible-role-lemp_stack/pulls/)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-lemp_stack.svg)](https://github.com/buluma/ansible-role-lemp_stack/releases/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/lemp_stack)](https://galaxy.ansible.com/ui/standalone/roles/buluma/lemp_stack/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
-This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-lemp-stack/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-lemp_stack/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
 ---
@@ -20,7 +20,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
     - role: buluma.lemp_stack
 ```
 
-The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-lemp-stack/blob/master/molecule/default/prepare.yml):
+The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-lemp_stack/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
@@ -68,7 +68,7 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 
 ## [Role Variables](#role-variables)
 
-The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-lemp-stack/blob/master/defaults/main.yml):
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-lemp_stack/blob/master/defaults/main.yml):
 
 ```yaml
 ---
@@ -77,7 +77,7 @@ php_version: 70
 
 ## [Requirements](#requirements)
 
-- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-lemp-stack/blob/master/requirements.txt).
+- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-lemp_stack/blob/master/requirements.txt).
 
 ## [State of used roles](#state-of-used-roles)
 
@@ -98,7 +98,7 @@ This role is part of many compatible roles. Have a look at [the documentation of
 
 Here is an overview of related roles:
 
-![dependencies](https://raw.githubusercontent.com/buluma/ansible-role-lemp-stack/png/requirements.png "Dependencies")
+![dependencies](https://raw.githubusercontent.com/buluma/ansible-role-lemp_stack/png/requirements.png "Dependencies")
 
 ## [Compatibility](#compatibility)
 
@@ -117,11 +117,11 @@ The minimum version of Ansible required is 2.12, tests have been done on:
 - The current version.
 - The development version.
 
-If you find issues, please register them on [GitHub](https://github.com/buluma/ansible-role-lemp-stack/issues).
+If you find issues, please register them on [GitHub](https://github.com/buluma/ansible-role-lemp_stack/issues).
 
 ## [License](#license)
 
-[MIT](https://github.com/buluma/ansible-role-lemp-stack/blob/master/LICENSE).
+[MIT](https://github.com/buluma/ansible-role-lemp_stack/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 

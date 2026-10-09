@@ -70,7 +70,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v7
         with:
-          path: ansible-role-lemp-stack
+          path: ansible-role-lemp_stack
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -98,11 +98,11 @@ jobs:
 
       - name: Test with molecule
         run: |
-          cd ansible-role-lemp-stack
+          cd ansible-role-lemp_stack
           molecule test
         env:
           PY_COLORS: 1
           ANSIBLE_FORCE_COLOR: 1
-          ANSIBLE_ROLES_PATH: ~/.ansible/roles:${GITHUB_WORKSPACE}/ansible-role-lemp-stack
+          ANSIBLE_ROLES_PATH: ~/.ansible/roles:${GITHUB_WORKSPACE}/ansible-role-lemp_stack
           image: ${{ matrix.distro.image }}
           tag: ${{ matrix.distro.tag }}
