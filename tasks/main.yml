@@ -15,7 +15,13 @@
   ansible.builtin.import_tasks: sendmail.yml
 - name: Main | Include root-config tasks
   ansible.builtin.import_tasks: root-config.yml
-- name: Install all updates
+- name: Install all updates on RPM systems
   ansible.builtin.dnf: # noqa: package-latest
     name: "*"
     state: latest
+  when: ansible_os_family == 'RedHat'
+- name: Install all updates on Debian systems
+  ansible.builtin.apt:
+    upgrade: dist
+    update_cache: true
+  when: ansible_os_family == 'Debian'
