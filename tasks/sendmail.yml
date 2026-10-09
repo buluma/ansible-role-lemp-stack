@@ -1,15 +1,10 @@
 ---
 - name: sendmail | Install Sendmail
-  with_items:
-    - sendmail
-    - sendmail-cf
-    - make
-    - mailx
-  ansible.builtin.dnf:
-    name: "{{ item }}"
+  ansible.builtin.package:
+    name: "{{ lemp_sendmail_packages[ansible_os_family] }}"
     state: present
 - name: sendmail | Remove Postfix
-  ansible.builtin.dnf:
+  ansible.builtin.package:
     name: postfix
     state: absent
 - name: sendmail | Copy Sendmail config

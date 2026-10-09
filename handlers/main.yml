@@ -7,5 +7,5 @@
 - name: Restart php-fpm
   ansible.builtin.service:
     enabled: true
-    name: php-fpm
+    name: "{{ lemp_php_fpm_service }}"
     state: restarted

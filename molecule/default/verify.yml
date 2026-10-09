@@ -11,6 +11,8 @@
     - name: Assert nginx is active
       ansible.builtin.assert:
         that:
-          - "'nginx' in services"
-          - "services['nginx']['state'] == 'running'"
+          - "'nginx.service' in ansible_facts.services or 'nginx' in ansible_facts.services"
+          - >-
+            ansible_facts.services.get('nginx.service',
+            ansible_facts.services.get('nginx', {})).state == 'running'
         quiet: true
