@@ -8,7 +8,6 @@
       - php-cli
       - php-fpm
       - php-gd
-      - php-imap
       - php-intl
       - php-mbstring
       - php-mysqlnd
